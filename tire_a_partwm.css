@@ -14,7 +14,7 @@ p      { margin: 4px 0 6px 0; }   /* diminution espace entre paragraphe */
 ul, ol { margin: 2px 0 2px 0; padding-left: 30px; }   /* diminution espace au-dessus listes, et espace sur la gauche */
 
 .watermark{
-    background:url("https://github.com/gbegin.github.io/Projet_3d.png ") no-repeat;opacity:0.6;
+    background:url("Projet_3d.png ") no-repeat;opacity:0.6;
   opacity: 0.1;
   position: absolute;
   width: 100%;
