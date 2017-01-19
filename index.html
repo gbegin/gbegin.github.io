@@ -7,6 +7,20 @@
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="tire_a_partsanswm.css" type="text/css" />
+  <style type="text/css">
+.tooltip {
+  font-size:10pt;
+  background-color:#FFFFCC;
+  border:1px solid black;
+  padding:2px
+}
+</style>
+<style type="text/css">
+.tooltip {
+  position:absolute;
+  display:none
+}
+</style>
 </head>
 <body>
 	
@@ -711,5 +725,156 @@
 </tbody>
 </table>
 </div>
+
+
+<script type="text/javascript">
+tooltip = null;
+document.onmousemove = updateTooltip;
+function updateTooltip(e) {
+try {
+if (document.all) {
+if (document.documentElement && document.documentElement.scrollTop) { // Explorer 6 Strict
+x = document.documentElement.scrollLeft + window.event.x;
+y = document.documentElement.scrollTop + window.event.y;
+}
+else { // all other Explorers
+x = document.body.scrollLeft + window.event.x;
+y = document.body.scrollTop + window.event.y;
+}
+}
+else {
+x = e.pageX;
+y = e.pageY;
+}
+if (tooltip != null) {
+o = 20;
+var sx, sy;
+if (self.pageYOffset) { // all except Explorer
+sx = self.pageXOffset;
+sy = self.pageYOffset;
+}
+else if (document.documentElement && document.documentElement.scrollTop) { // Explorer 6 Strict
+sx = document.documentElement.scrollLeft;
+sy = document.documentElement.scrollTop;
+}
+else if (document.body) { // all other Explorers
+sx = document.body.scrollLeft;
+sy = document.body.scrollTop;
+}
+t = y + o + tooltip.offsetHeight;
+w = sy + document.body.clientHeight;
+if (t > w) {
+y = y - o - tooltip.offsetHeight;
+}
+else {
+y = y + o;
+}
+t = x + o + tooltip.offsetWidth;
+w = sx + document.body.clientWidth;
+if (t > w) {
+x = x - o - tooltip.offsetWidth;
+}
+else {
+x = x + o;
+}
+if ((tooltip.style.top == '' || tooltip.style.top == 0) && (tooltip.style.left == '' || tooltip.style.left == 0))
+{
+tooltip.style.width = tooltip.offsetWidth + 'px';
+tooltip.style.height = tooltip.offsetHeight + 'px';
+}
+tooltip.style.left = x + "px";
+tooltip.style.top = y + "px";
+}
+} catch (error) { error = null; }
+}
+function showTooltip(id) {
+try {
+tooltip = document.getElementById(id);
+tooltip.style.display = "block";
+} catch (error) { error = null; }
+}
+function hideTooltip() {
+try {
+tooltip.style.display = "none";
+} catch (error) { error = null; }
+}
+</script>
+
+<div class="tooltip" id="n0">Communication efficace: <br>un outil de gestion</div>
+<div class="tooltip" id="n1">Programmation I</div>
+<div class="tooltip" id="n2">Mathématiques pour <br>informaticien</div>
+<div class="tooltip" id="n3">Calcul I</div>
+<div class="tooltip" id="n4">Électronique pratique</div>
+<div class="tooltip" id="n5">Programmation II</div>
+<div class="tooltip" id="n6">Organisation des ordinateurs <br>et assembleur</div>
+<div class="tooltip" id="n7">Circuits logiques</div>
+<div class="tooltip" id="n8">Projet intégrateur 1</div>
+<div class="tooltip" id="n9">Signaux et systèmes</div>
+<div class="tooltip" id="n10">Interconnexions et <br>communications</div>
+<div class="tooltip" id="n11">Structures de données <br>et algorithmes</div>
+<div class="tooltip" id="n12">Construction et maintenance <br>de logiciels</div>
+<div class="tooltip" id="n13">Téléinformatique</div>
+<div class="tooltip" id="n14">Analyse de circuits</div>
+<div class="tooltip" id="n15">Circuits intégrés <br>programmables</div>
+<div class="tooltip" id="n16">Principes des systèmes <br>d’exploitation</div>
+<div class="tooltip" id="n17">Fichiers et bases <br>de données</div>
+<div class="tooltip" id="n18">Projet intégrateur 2</div>
+<div class="tooltip" id="n19">Électronique analogique et <br>numérique</div>
+<div class="tooltip" id="n20">Traitement numérique <br>des signaux</div>
+<div class="tooltip" id="n21">Probabilités I</div>
+<div class="tooltip" id="n22">Introduction à la gestion <br>de projet</div>
+<div class="tooltip" id="n23">Systèmes embarqués</div>
+<div class="tooltip" id="n24">Projet intégrateur <br>thématique</div>
+<div class="tooltip" id="n25">Systèmes de télécommunications <br>embarquées</div>
+<div class="tooltip" id="n26">Systèmes de communication</div>
+<div class="tooltip" id="n27">Stage d'intégration</div>
+<div class="tooltip" id="n28">Cours obligatoires et préalables</div>
+<div class="tooltip" id="n29">Normalement offert à l'automne</div>
+<div class="tooltip" id="n30">Normalement offert à l'hiver</div>
+<div class="tooltip" id="n31">Normalement offert l'été</div>
+
+<map name="image1_1">
+  <area shape="rect" coords="338,759,501,789" alt="" onmouseover="showTooltip('n31')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="15,808,223,838" alt="" onmouseover="showTooltip('n30')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="15,757,223,787" alt="" onmouseover="showTooltip('n29')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="271,17,540,47" alt="" onmouseover="showTooltip('n28')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="223,634,290,727" alt="" onmouseover="showTooltip('n27')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="510,324,576,417" alt="" onmouseover="showTooltip('n26')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="736,636,802,729" alt="" onmouseover="showTooltip('n25')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="590,76,657,169" alt="" onmouseover="showTooltip('n24')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="111,636,178,729" alt="" onmouseover="showTooltip('n23')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="390,76,460,169" alt="" onmouseover="showTooltip('n22')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="409,200,479,293" alt="" onmouseover="showTooltip('n21')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="606,324,672,417" alt="" onmouseover="showTooltip('n20')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="225,464,292,557" alt="" onmouseover="showTooltip('n19')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="128,464,195,557" alt="" onmouseover="showTooltip('n18')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="529,636,593,729" alt="" onmouseover="showTooltip('n17')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="338,636,402,729" alt="" onmouseover="showTooltip('n16')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="15,636,81,729" alt="" onmouseover="showTooltip('n15')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="191,324,258,417" alt="" onmouseover="showTooltip('n14')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="432,636,496,729" alt="" onmouseover="showTooltip('n13')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="322,464,386,557" alt="" onmouseover="showTooltip('n12')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="626,636,690,729" alt="" onmouseover="showTooltip('n11')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="736,464,802,557" alt="" onmouseover="showTooltip('n10')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="509,200,576,293" alt="" onmouseover="showTooltip('n9')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="95,324,161,417" alt="" onmouseover="showTooltip('n8')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="31,464,98,557" alt="" onmouseover="showTooltip('n7')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="416,464,480,557" alt="" onmouseover="showTooltip('n6')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="529,464,593,557" alt="" onmouseover="showTooltip('n5')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="111,200,178,293" alt="" onmouseover="showTooltip('n4')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="490,76,560,169" alt="" onmouseover="showTooltip('n3')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="642,464,706,557" alt="" onmouseover="showTooltip('n2')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="416,324,480,417" alt="" onmouseover="showTooltip('n1')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="287,76,360,169" alt="" onmouseover="showTooltip('n0')" onmouseout="hideTooltip()"/>
+</map>
+
+
+    <table class="yimagetable" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td><img class="yimage" src="graphe_cours-v2_tooltip1_1.png" usemap="#image1_1" border="0" alt=""/></td>
+      </tr>
+    </table>
+
+
 </body>
 </html>
