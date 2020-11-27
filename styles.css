@@ -1,3 +1,12 @@
+/*  Feuille de style markdown-pandoc.css 
+    d'amélioration du look des pages HTML générées par Pandoc à partir de source Markdown
+    CC BY-SA  Jean-Daniel-Bonjour@epfl.ch, EPFL-ENAC-IT (référence http://enacit1.epfl.ch/markdown-pandoc/)
+    
+    M-à-j sur: (w530/t3500) ENAC-IT/divers/markdown-pandoc/
+                root@enacit1lin1:/data/it1/markdown-pandoc/
+                enacit1@enacit1vm1:/data/web/enacit1-sysadmin/
+*/
+
 
 /* Caractéristiques de base de l'ensemble du BODY de la page */
 body { margin-left: auto; margin-right: auto; max-width: 900px; font-family: serif; font-size: 13px; color: #444; }   /* fonte serif ! */
@@ -13,13 +22,7 @@ body { margin-left: auto; margin-right: auto; max-width: 900px; font-family: ser
 p      { margin: 4px 0 6px 0; }   /* diminution espace entre paragraphe */
 ul, ol { margin: 2px 0 2px 0; padding-left: 30px; }   /* diminution espace au-dessus listes, et espace sur la gauche */
 
-.watermark{
-    background:url("Projet_3d.png ") no-repeat;opacity:0.6;
-  opacity: 0.1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
+
 
 /* Style des titres H1 à H6 */
 h1, h2, h3, h4, h5, h6 { font-family: Arial, Helvetica, sans-serif; }
