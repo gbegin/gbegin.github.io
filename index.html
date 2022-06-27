@@ -1,223 +1,219 @@
-<!doctype html>
-<html lang="fr">
-<html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>proto_home_lab_sanstableau</title></head>
-<link rel="stylesheet" href="styles.css" type="text/css" />
+<!-- 2022-06-27 lun 12:19 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ressources pour /Introduction aux circuits logiques/</title>
+<meta name="author" content="guy" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-<body><h1>Équipements pour le laboratoire-maison BSIE</h1>
-<p>Que ce soit pour faire vos propres expérimentations à la maison, pour approfondir et parfaire vos connaissances, voire pour pouvoir réaliser certaines des expériences exigées dans les cours du programme, il peut être très avantageux de se constituer, à coûts modestes, son propre laboratoire d&#39;expérimentation en systèmes informatiques et électroniques. </p>
-<p>Afin de vous guider dans cette démarche, nous avons préparé une liste de suggestions d&#39;équipements et de matériel. Les prix sont donnés à titre indicatif seulement, il y a souvent des fluctuations de prix dans le domaine (et parfois à la baisse!). </p>
-<p>À chaque équipement est associée une liste des principaux cours du bacc. pour lesquels l&#39;instrument pourrait être utile.</p>
-<h2>Liste </h2>
-<h3>Multimètre</h3>
-<p><img src="Images/image-244.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>UNI-T UT136B Digital Multimeter</p>
-<p><a href='https://www.ebay.ca/itm/UNI-T-UT136B-Digital-Multimeter-Tester-AC-DC-Voltage-Current-Ohm-Diode-Cap-Hz/292433880314?hash=item44166ae4fa&amp;enc=AQADAAADEFjVrDbVsZ8oH%2F8PNHtt9VX4%2Fw7FZcmMuqsX8uaFEduVQCIOcCyNqvy53%2BbqYiRXDAZvn122vLpv4B5hRE07gwoAhU4f1Oc7S9i6ewub6LeFTSdnsxJKr314XkWw46Yon%2FC3CLAUOTAage9tJ8Ow5SmjY1tN%2BtXQsYI18fSZWvs6hsalVs1XvJfXHcs7u9ItaNuviMTgmBcXlzLEvIglm6yGTsIwagHqK0CqaB2j5CVSMPLXUkFfJFo%2BHJGfrjzk4SBp6aG0CJhXNVVeRJZvZkjaOvEDRtnsXGnNM9GAOhfa4U7i4lnT6q5%2Foo5A6FjtqzNDZEgV4FOPtPsYPvk3x4Mjfd4zQ7dFtd2wWC7qPIXvcG0%2BHIP%2FcVMD4lsD4jXMSx9FQrcowonTP5Z5ZhtipOJ4s6gBR%2BWAl2W%2BxlQwmfmZ0P2%2BNywxaqqIhA8tgc%2BEnu6IVWSke8c70ddSFjYtJVugVnt0vWpIy5g7atAbN7iEF4YT9P1vY6hdZtJ%2BrtjGDh08iY3aB9QNPSrNZNm8OT8I0KY0i0W2v1LV2kk%2Bbk6108zMmRslaRa5xreZ4WaiGTfIIcHitwBcWHTnuC4%2FuhSTqRvzAbLWwqKMJaPQLHNyLcMvx9EZcW3Q69AQp5Hs72yMBhRrwjv37wdZnox3%2BlG8PmeRkliVjnf6Ht6fCRK%2BLRyWF28sXXGtRU3yZsW9k7vVNLHZfAlS1VpanhdjhOpPhYXwxEdCxCCgpNjJIrpFk%2FtyXN3PCrSfyhB6gTSTxoq0wN%2BhpK60%2FwT%2FK30%2FAb9A%2BFagVMc8Zr2IRhVcbS%2FvC%2B9K5akYQijp2kNVBKe1PE4Bcv4qchfeLS8q0r4xXHvXBQqTquAt%2FkN72OcNCmPsVHI34UawxASeV%2BvHJEzP5nr3yii4jeKp%2FOZfuLZDHPlyCJKM5jzlLFRC3CtDDEN5ewvrq%2FPDdJXNbFS%2F6Zr2AZ6cP8ZZFbyXstNQBKHynmgpIgLkOA2bL%2FLqqgfnUH2scyr5I90ogpN3nRoaURISILeKYgvDDCUIpRkMD4HV00M%3D&amp;checksum=29243388031418e20f7ac37b4663a53d84d9f7230fdc'>Achat</a>
-31,01 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>Tous</li>
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Ressources pour <i>Introduction aux circuits logiques</i></h1>
+<div id="outline-container-org1eeafd1" class="outline-2">
+<h2 id="org1eeafd1">Ressources Web</h2>
+<div class="outline-text-2" id="text-org1eeafd1">
+<p>
+<a href="https://gbegin.github.io/ciab-circuits-logiques-part1/">Cours: première partie</a>
+</p>
 
-</ul>
-<hr />
-<h3>Dispositif multifonction (combiné à un ordinateur, ensemble très polyvalent: oscilloscope, générateur de fonction, analyseur logique, voltmètre, etc.)</h3>
-<p>ADALM2000 Advanced Active Learning Module</p>
-<p><img src="Images/ADALM2000-web.png" referrerpolicy="no-referrer" alt="img"></p>
-<p><a href='https://www.mouser.ca/ProductDetail/Analog-Devices/ADALM2000?qs=xbccQsLEe0e03sUxIHWPSw=='>Achat</a>
-216,00 $
-Principaux cours:</p>
-<ul>
-<li>Tous</li>
+<p>
+<a href="https://gbegin.github.io/ciab-circuits-logiques-part2/">Cours: deuxième partie</a>
+</p>
 
-</ul>
-<hr />
-<h3>Analyseur Logique</h3>
-<p><img src="Images/image-194.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>OWON</p>
-<p><a href='https://www.ebay.ca/itm/New-OWON-VDS1022I-USB-Isolation-PC-Digital-Storage-Oscilloscope-25MHz-100MS-s-MT/312470682225?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D1%26asc%3D20180124145912%26meid%3D00277d92147f40dca2d9f3f484ff6902%26pid%3D100005%26rk%3D1%26rkt%3D12%26sd%3D163653504421%26itm%3D312470682225&amp;_trksid=p2047675.c100005.m1851'>Achat</a>
-163,94 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>MIC1065 Circuits logiques</li>
-<li>MIC4101 Électronique analogique et numérique</li>
-<li>MIC6130 Circuits intégrés programmables</li>
-
-</ul>
-<hr />
-<h3>Source d&#39;alimentation-DC</h3>
-<p><img src="Images/image-188.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>DC Power Supply</p>
-<p><a href='https://www.ebay.ca/itm/30v-5a-110v-Precision-Variable-DC-Power-Supply-Digital-Adjustable-w-Cable/253840033040?hash=item3b1a0b8510&amp;enc=AQADAAADAFjVrDbVsZ8oH%2F8PNHtt9VX4%2Fw7FZcmMuqsX8uaFEduVl8YyisVOWLDvorje%2FkZfgjioIguOtHTqTJ045UlUQZKeK7WAXt3Jc%2F3wtnbeoeit3K8jpzMsWOTBx7PBee3BmkH63Cnwb9KxzUnhM5gKDYrtAV1aQCgZM%2BOtAnXDnMjO4TEI8QpahfBVAlov55Ul8qhZx7BJUo9Ytu4avzwU9awnO3vyAFJWjBePMz8%2BBqJv5nqAEYk9HBZzF%2BvsaPgGxnW7JPiEjP0kZk%2Bv8iPyteZpMUehng5YVBZdE7lsqTffdaKtSxo06P3R0lfW1rGRW%2Fk%2BBGqPP6H7JcClassD%2BkrOpYVvEMHMNQIhKpjH5qqenrJmhjr5yK6HvOtjLN5e4SxYmWxlbYmuoFSvI06WvFsLWhZdUolEJoMiY44f0WfJ9ejE%2FZGGzFAjtOVrWF67RfGZR53gTWLvzsThbC9vqZ76zw3fhkyqngJ4xUPAzjiae4npaPE6tuBAhr8DISpkQkL0PgFEGF3HAK1eXGfxUSIMYqt9VFCAvbNP4xkbJ7QSatXwz7rSVHLYWQPk5fQ%2FftG%2BMUtIsUGwlmDAKZ4qaa8V%2B0PERoKv9PizJM7oxOcu3kN4Hu867MfPmI10Doo%2FBqd5bBoo72sHVMUlFeUhGSFzzoj3hJbwUG13tyzQZwBD49X9JQqP9IJdn7IIUXu7lsBwdOLkoWu%2FBQq2Vdn1pVvniA7vIZUcoORRjsgMw4VCGImN6mNsJBfZKkMXsjIliLoSKgSzBN182ipunhP%2Bg%2FU1UOpOosf1%2FA2I3s%2FRpihqDXgC6mrJtHaySjQG3TgAta%2FcyRTFe9LP7%2FtNWwfCELVLkF3IADtlExQsrCjOG8Owb7t02PEqxm3JavpXKps2gQmiJDJ3qrg4c%2BAqumfdioTMOHd6RbMts9BLaw7LImrWumCg60QcwS7WiOmd1hu2oOfBkdE5IkfJeBUOaOmK4BazswncDKSF5XzPWqsHaA%2BrGqtvr8q90vFePeZnbEy9yQ%3D%3D&amp;checksum=253840033040d0466f12305d44e092670c4619c7ac07'>Achat</a>
-78,00 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>Tous</li>
-
-</ul>
-<hr />
-<h3>Générateur de signaux</h3>
-<p><img src="Images/image-292.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>DDS Function Signal Generator module </p>
-<p><a href='https://www.ebay.ca/itm/DDS-Function-Signal-Generator-Module-DIY-Sawtooth-Triangle-Square-Sine-Wave-Kit/273003886816?hash=item3f904cb8e0:g:N5IAAOSwYwJaR0~g'>Achat</a>
-19,00 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>MIC3220 Signaux et systèmes</li>
-<li>MIC4220 Traitement numérique des signaux</li>
-
-</ul>
-<hr />
-<h3>Station de soudure</h3>
-<p><img src="Images/image-362.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>Weller WE1010NA Digital Soldering Station</p>
-<p><a href='https://www.ebay.ca/itm/6-PCS-Stainless-Steel-Non-magnetic-Tweezers-ICs-SMD-SMT-Jewelry-Plier-Tools/302116529195?hash=item46578c642b:g:ixcAAOSwHMJYDawm'>Achat</a>
-122,00 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>MIC2116 Projet intégrateur 1</li>
-<li>MIC3111 Projet intégrateur 2</li>
-
-</ul>
-<hr />
-<h3>Loupe</h3>
-<p>Magnifying glass</p>
-<p><a href='https://www.amazon.com/dp/B00OK0MAX6/ref=sspa_dk_detail_1?psc=1&amp;pd_rd_i=B00OK0MAX6&amp;pd_rd_w=kcUvA&amp;pf_rd_p=8a8f3917-7900-4ce8-ad90-adf0d53c0985&amp;pd_rd_wg=JYvXr&amp;pf_rd_r=DTA5Z4H97T6CEVQ7D2P2&amp;pd_rd_r=a624ff9a-7014-11e9-8571-'>Achat</a>
-11,29 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>MIC2116 Projet intégrateur 1</li>
-<li>MIC3111 Projet intégrateur 2</li>
-
-</ul>
-<hr />
-<h3>Circuits imprimés de prototypage</h3>
-<p><img src="Images/image-191.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>5pcs double side 5x7 cm printed prototyping circuit</p>
-<p><a href='https://www.ebay.ca/p/5pcs-Double-Side-5-X-7cm-Printed-Circuit-PCB-Vero-Prototyping-Track-Strip-Board/1254422972'>Achat</a>
-2,31 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>MIC2116 Projet intégrateur 1</li>
-<li>MIC3111 Projet intégrateur 2</li>
-
-</ul>
-<hr />
-<h3>Pince non-magnétique, composantes SMD</h3>
-<p><img src="Images/image-183.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>6pcs pinces</p>
-<p><a href='https://www.ebay.ca/itm/6-PCS-Stainless-Steel-Non-magnetic-Tweezers-ICs-SMD-SMT-Jewelry-Plier-Tools/302116529195?hash=item46578c642b:g:ixcAAOSwHMJYDawm'>Achat</a>
-13,41 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>MIC2116 Projet intégrateur 1</li>
-<li>MIC3111 Projet intégrateur 2</li>
-
-</ul>
-<hr />
-<h3>Pince à découper fil électrique</h3>
-<p><img src="Images/image-190.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>2pcs durable electrical wire cable</p>
-<p><a href='https://www.cafr.ebay.ca/itm/Durable-Electrical-Wire-Cable-Cutter-Cutting-Plier-Side-Snips-Flush-Pliers-B-fg/293025770966?hash=item4439b26dd6&amp;enc=AQADAAADEFjVrDbVsZ8oH%2F8PNHtt9VX4%2Fw7FZcmMuqsX8uaFEduVycAtmEKyl2I6WC%2FlxtBjHcBG45HuXouuy3Z8tFeusM12fOWfteAp9lnTaHQeNf%2Byfm65tS6%2FtOcqlu1fLIUjhE9ctpyQR9vhVElwS7PcuL4LRiG2YPs8fNamTyFdJH9sXPSCiGlPMrS%2FD6drLqu9vMBJwDezgqw01E4%2BX0sE7IaM0D3VEie%2Fa2GaUESq%2FHZulLBLtOPTy0Pstk9hqrgJrfICbiXib%2B5kc1%2BaziaPrujEzfcMyOUcai%2FmgMnztkkx3KKkeZppY90ZVDtUm41CippD52XA7DTwX8xkliJy1ZCj6EByZsZDr3WZZv2U9Q8urFHTz1IkCnBVChVBfKnE2n8ofcKUBwANqHk7wS1wOJ4zyx4Rh4WKgZL8okUvCJya9DYrK1D0lAIXnKPoJTZIvje5dXclSjLsNe9lN8fN2nfKAqcHauh6r0XLMlt9p6W3TRMOLXc9Ce2ucWWSC0qi41MGmiVQQKKDbOVjiLwaYXfvCa0YBOSwJWOiue2vdW3fWZSFc6me3ghQjZgav5qCl%2Ff5Ckf4Wt1H9VgZZEgbagEC3gRDO0hneXlNNTm6fCWP4VxoSnTou0iPR5rU06GWSgxlRxPGqjnEiPd50BlGVBMhYPqj7oETllv3sLMrDRmBS%2FWQxpcwT6%2FeYUSw4EvNvuIJ5eTkEZJyCMzYOdPIEkitPZKL%2Bkc7cNAtqokflRJ54mrJ6ss2s55c2GV6%2F%2FFwshTIyaN23t4CzIhSDYnb2Fj9wxLCNeKfWzLs5peEV%2B8wubWzQO134Ki7N9uwjB5cMOJr9VESq7b8439P4Jr%2BObvZU%2BcIgoDmEywscermuReCJWF9KZViBjq90vC58xbNgrPFQ36OVP5gaKONGaf7iHvB4XEzYKTFmoBaTY1N12VeEx4ewoab5hbSdf1lhqC99Q6tlNUVRyzDf4p6YkLeZiywxaozQufBXUSJeIU432tVlRPVlCxymb99CmplSUf1WcP8h4BlMcYjCDCZOHyk8iM%3D&amp;checksum=293025770966457d22916d454f56a26f4d66b50c4608'>Achat</a>
-2,99 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>Tous</li>
-
-</ul>
-<hr />
-<h3>Rouleau d&#39;étain</h3>
-<p><img src="Images/image-245.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>0,4 mm Tin Lead Flux</p>
-<p><a href='https://www.ebay.ca/itm/63-37-Tin-Lead-Rosin-Core-Solder-Flux-Welding-Iron-Wire-Reel-Phone-Repair/183176898998?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D1%26asc%3D20180124145912%26meid%3Deabd42dd56f9490e9fc7448a26db27e4%26pid%3D100005%26rk%3D6%26rkt%3D9%26sd%3D113739073496%26itm%3D183176898998&amp;_trksid=p2047675.c100005.m1851'>Achat</a>
-4,50 $</p>
-<p><img src="Images/image-301.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>0,3mm Tin Lead Flux 1.2% 60/40</p>
-<p><a href='https://www.ebay.ca/itm/0-3mm-50G-60-40-Rosin-Core-Flux-1-2-Tin-Lead-Roll-Soldering-Solder-Wire-0-01sin/222446880260?hash=item33cade0604:g:4j0AAOSwuLZY0PdO'>Achat</a>
-6,03 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>Tous</li>
-
-</ul>
-<hr />
-<h3>Pompe à dessouder</h3>
-<p><img src="Images/image-174.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>Pump Solder Sucker with Locking</p>
-<p><a href='https://www.amazon.ca/Plunger-Desoldering-Solder-Locking-Removal/dp/B07J3ZDVBC/ref=sr_1_10?adgrpid=66688897375&amp;gclid=EAIaIQobChMI-uamqMiH4gIViqGzCh0abQIkEAAYASAAEgJTa_D_BwE&amp;hvadid=338567031523&amp;hvdev=c&amp;hvlocphy=9000406&amp;hvnetw=g&amp;hvpos=1t1&amp;hvqmt=e&amp;hvrand=4622418516569499381&amp;hvtargid=kwd-311703653426&amp;hydadcr=28411_11614398&amp;keywords=desoldering+pump&amp;qid=1557168398&amp;s=gateway&amp;sr=8-10'>Achat</a>
-13,99 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>Tous</li>
-
-</ul>
-<hr />
-<h3>Mèche (tresse) à dessouder</h3>
-<p><img src="Images/image-167.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>Goot CP-3515 Desoldering Wick Braid</p>
-<p><a href='https://www.ebay.ca/itm/NEW-Goot-CP-3515-Desoldering-Wick-Braid-3-5mm-Wide-1-5m-Long/253176108410?hash=item3af278d57a:g:UOcAAOSwWlNZyntN'>Achat</a>
-9,19 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>Tous</li>
-
-</ul>
-<hr />
-<h3>Bread Board Electronics KIT</h3>
-<p><img src="Images/image-208.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>elegoo Electronics Fun Kit</p>
-<p><a href='https://www.amazon.ca/Electronics-Precision-Potentiometer-tie-points-Breadboard/dp/B01ERPEMAC/ref=sr_1_3?__mk_fr_CA=ÅMÅŽÕÑ&amp;keywords=breadboard+electronics&amp;qid=1557172550&amp;s=electronics&amp;sr=1-3'>Achat</a>
-23,00 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>Tous</li>
-
-</ul>
-<hr />
-<h3>Plaquette FPGA</h3>
-<p><img src="Images/image-303.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>Basys 3 Artix-7 FPGA Trainer Board</p>
-<p>Vivado Design Suite WebPACK Edition</p>
-<p><a href='https://store.digilentinc.com/basys-3-artix-7-fpga-trainer-board-recommended-for-introductory-users/'>Achat</a>
-200,00 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>MIC1065 Circuits logiques</li>
-<li>MIC6130 Circuits intégrés programmables</li>
-
-</ul>
-<hr />
-<h3>Plaquette microcontrôleur</h3>
-<p><img src="Images/image-476.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>CY8CKIT-059 Psoc 5LP Prototyping Kit with Onboard Programmer and Debugger
-Logiciel de développement: Psoc Creator, Psoc Programmer
-Logiciel de déverminage: permet de sortir des points de tests sur des broches et visualiser les signaux sur l&#39;oscilloscope.</p>
-<p><a href='https://www.cypress.com/documentation/development-kitsboards/cy8ckit-059-psoc-5lp-prototyping-kit-onboard-programmer-and'>Achat</a>
-10,00 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>MIC5111 Systèmes embarqués</li>
-<li>MIC6130 Circuits intégrés programmables</li>
-
-</ul>
-<hr />
-<h3>Plaquette microcontrôleur</h3>
-<p><img src="Images/image-406.png" referrerpolicy="no-referrer" alt="img"></p>
-<p>CY8CKIT-044 PSOC 4M-Series Pionner KIT
-Logiciel de développement: Psoc Creator, Psoc Programmer
-Logiciel de déverminage: permet de sortir des points de tests sur des broches et visualiser les signaux sur l&#39;oscilloscope.</p>
-<p><a href='https://www.cypress.com/documentation/development-kitsboards/cy8ckit-044-psoc-4-m-series-pioneer-kit'>Achat</a>
-25,00 $</p>
-<p>Principaux cours:</p>
-<ul>
-<li>MIC5111 Systèmes embarqués</li>
-<li>MIC6130 Circuits intégrés programmables</li>
-<li>MIC4220 Traitement numérique des signaux</li>
-<li>TEL5025 Systèmes de télécommunications embarquées</li>
-
-</ul>
-<hr />
-<p>&nbsp;</p>
+<p>
+<a href="https://gbegin.github.io/Laboratoire_maison/">Options pour un laboratoire maison</a>
+</p>
+</div>
+</div>
+</div>
 </body>
 </html>
